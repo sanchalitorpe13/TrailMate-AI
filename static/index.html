@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrailMate AI — Your open-source AI nature companion</title>
+  <meta name="description" content="TrailMate AI turns the intention to go outside into a small, personal nature mission, written by a local open-weight AI model. Read the mission. Lock your phone. Go be here.">
+  <meta name="theme-color" content="#2f5d3a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f5d3a'/%3E%3Cpath d='M16 6l7 12h-4l5 8H8l5-8H9z' fill='%23faf5e9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="TrailMate AI home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="currentColor"></rect>
+          <path d="M16 6l7 12h-4l5 8H8l5-8H9z" fill="#faf5e9"></path>
+        </svg>
+        <span>TrailMate <span class="brand-ai">AI</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#plan">Plan</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#journal">Journal</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+        </ul>
+      </nav>
+      <p id="health-pill" class="pill" data-state="checking" role="status">
+        <span class="pill-dot" aria-hidden="true"></span>
+        <span id="health-text">Checking local AI…</span>
+      </p>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Hacktoberfest 2026 · Touch Grass</p>
+        <h1 id="hero-title">Read the mission.<br>Lock your phone.<br><span class="accent">Go be here.</span></h1>
+        <p class="lead">
+          TrailMate AI turns “I should go outside” into a small, personal nature mission.
+          An open-weight AI model running on your own computer writes it, you leave the screen
+          behind, and you come back to jot down what you noticed.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#plan">Plan my mission</a>
+          <a class="btn btn-secondary" href="#privacy">How it works</a>
+        </div>
+        <ol class="steps">
+          <li><strong>Choose</strong> your time, interests and place.</li>
+          <li><strong>Read</strong> your mission once, then lock your phone.</li>
+          <li><strong>Go</strong> outside, then record what you saw, heard or felt.</li>
+        </ol>
+      </div>
+
+      <div class="hero-art-wrap">
+        <svg class="hero-art" viewBox="0 0 480 380" role="img" aria-label="Illustration of rolling green hills, pine trees, a winding trail, a few birds and a rising sun">
+          <defs>
+            <g id="pine">
+              <polygon points="0,-62 22,-20 -22,-20"></polygon>
+              <polygon points="0,-44 28,4 -28,4"></polygon>
+              <rect x="-4" y="4" width="8" height="14"></rect>
+            </g>
+          </defs>
+          <rect class="art-sky" width="480" height="380" rx="28"></rect>
+          <circle class="art-sun-glow" cx="350" cy="98" r="64"></circle>
+          <circle class="art-sun" cx="350" cy="98" r="42"></circle>
+          <g class="art-cloud">
+            <ellipse cx="108" cy="84" rx="44" ry="14"></ellipse>
+            <ellipse cx="138" cy="72" rx="30" ry="14"></ellipse>
+            <ellipse cx="84" cy="74" rx="24" ry="11"></ellipse>
+          </g>
+          <path class="art-hill-far" d="M0 250 Q90 170 190 232 T380 214 T480 236 V380 H0Z"></path>
+          <use class="art-pine-far" href="#pine" transform="translate(402 238) scale(.7)"></use>
+          <use class="art-pine-far" href="#pine" transform="translate(432 244) scale(.55)"></use>
+          <path class="art-hill-mid" d="M0 292 Q120 220 240 284 T480 270 V380 H0Z"></path>
+          <use class="art-pine" href="#pine" transform="translate(62 282) scale(1.1)"></use>
+          <use class="art-pine" href="#pine" transform="translate(104 292) scale(.8)"></use>
+          <use class="art-pine" href="#pine" transform="translate(414 292) scale(1.0)"></use>
+          <path class="art-hill-near" d="M0 334 Q140 282 260 332 T480 320 V380 H0Z"></path>
+          <path class="art-trail" d="M205 382 C215 352 160 342 190 320 C220 300 262 302 252 280 C246 264 232 260 236 248"></path>
+          <g class="art-bird">
+            <path d="M78 150 q9 -10 18 0 q9 -10 18 0"></path>
+            <path d="M150 122 q7 -8 14 0 q7 -8 14 0"></path>
+            <path d="M236 168 q6 -7 12 0 q6 -7 12 0"></path>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- PROGRESS -->
+    <section id="progress" class="section container" aria-labelledby="progress-title">
+      <div class="section-head">
+        <h2 id="progress-title">Your progress</h2>
+        <span class="tag">Self-reported</span>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card">
+          <p class="stat-value" id="stat-created">–</p>
+          <p class="stat-label">Missions created</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-value" id="stat-completed">–</p>
+          <p class="stat-label">Missions completed</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-value" id="stat-minutes">–</p>
+          <p class="stat-label">Outdoor minutes (self-reported)</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-value" id="stat-journal">–</p>
+          <p class="stat-label">Journal entries</p>
+        </article>
+      </div>
+      <p id="stats-note" class="note"></p>
+
+      <h3 class="subhead">Recent activity</h3>
+      <ul id="recent-list" class="recent-list"></ul>
+      <p id="recent-empty" class="empty" hidden>No missions yet. Your first one is just below.</p>
+    </section>
+
+    <!-- PLAN -->
+    <section id="plan" class="section container" aria-labelledby="plan-title">
+      <div class="section-head">
+        <h2 id="plan-title">Plan a mission</h2>
+      </div>
+      <form id="mission-form" class="card form-card" novalidate>
+        <fieldset class="field">
+          <legend>How much time do you have?</legend>
+          <div class="chip-row">
+            <label class="chip"><input type="radio" name="duration" value="10"><span>10 min</span></label>
+            <label class="chip"><input type="radio" name="duration" value="20" checked><span>20 min</span></label>
+            <label class="chip"><input type="radio" name="duration" value="30"><span>30 min</span></label>
+            <label class="chip"><input type="radio" name="duration" value="45"><span>45 min</span></label>
+            <label class="chip"><input type="radio" name="duration" value="60"><span>60 min</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>What are you curious about? <span class="hint">(pick one or more)</span></legend>
+          <div class="chip-row">
+            <label class="chip"><input type="checkbox" name="interest" value="nature discovery" checked><span>Nature discovery</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="bird watching"><span>Bird watching</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="plants"><span>Plants</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="mindfulness"><span>Mindfulness</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="photography"><span>Photography</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="walking"><span>Walking</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="environment-select">Where will you be?</label>
+          <select id="environment-select" name="environment">
+            <option value="a garden">Garden</option>
+            <option value="campus grounds">Campus</option>
+            <option value="a nearby park" selected>Nearby park</option>
+            <option value="other">Somewhere else…</option>
+          </select>
+          <div id="environment-other-wrap" hidden>
+            <label for="environment-other" class="sub-label">Describe the place</label>
+            <input id="environment-other" type="text" maxlength="120" placeholder="e.g. a quiet riverside path">
+          </div>
+          <p class="hint">TrailMate only reads this short description. It cannot see maps, weather or trail conditions.</p>
+        </div>
+
+        <fieldset class="field">
+          <legend>How adventurous do you feel?</legend>
+          <div class="chip-row">
+            <label class="chip"><input type="radio" name="difficulty" value="easy" checked><span>Easy</span></label>
+            <label class="chip"><input type="radio" name="difficulty" value="medium"><span>Medium</span></label>
+            <label class="chip"><input type="radio" name="difficulty" value="adventurous"><span>Adventurous</span></label>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button id="generate-btn" class="btn btn-primary btn-large" type="submit">
+            <span id="generate-spinner" class="spinner" aria-hidden="true" hidden></span>
+            <span id="generate-label">Create my mission</span>
+          </button>
+        </div>
+        <p id="form-status" class="note" role="status"></p>
+        <p id="form-error" class="form-error" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- MISSION -->
+    <section id="mission" class="section container" aria-labelledby="mission-heading">
+      <div class="section-head">
+        <h2 id="mission-heading">Your mission</h2>
+      </div>
+
+      <div id="mission-empty" class="card empty-card">
+        <p>No mission yet. Create one above and it will appear here with a checklist.</p>
+      </div>
+
+      <article id="mission-view" class="card mission-card" aria-labelledby="mission-title" hidden>
+        <div id="mission-badges" class="badges"></div>
+        <h3 id="mission-title" tabindex="-1"></h3>
+        <p id="mission-description" class="mission-desc"></p>
+        <p id="mission-focus" class="mission-focus"></p>
+        <p id="mission-source-note" class="note"></p>
+
+        <div class="reminder">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"></rect>
+            <circle cx="12" cy="18.2" r="1.1" fill="currentColor"></circle>
+          </svg>
+          <p id="mission-reminder"></p>
+        </div>
+
+        <div class="progress-block">
+          <p id="progress-label" class="progress-label"></p>
+          <div id="progress-track" class="progress-track" role="progressbar" aria-label="Mission progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <ol id="task-list" class="task-list"></ol>
+        <p id="encouragement" class="encouragement" role="status"></p>
+
+        <div id="mission-actions" class="actions">
+          <button id="start-btn" class="btn btn-primary" type="button">Start mission</button>
+          <button id="outside-btn" class="btn btn-primary" type="button" hidden>Go outside (dim screen)</button>
+          <button id="complete-btn" class="btn btn-secondary" type="button" hidden>I did it, mark complete</button>
+        </div>
+
+        <div id="timer-panel" class="timer-panel" hidden>
+          <label class="check">
+            <input type="checkbox" id="timer-enabled">
+            <span>Use an optional countdown timer</span>
+          </label>
+          <div id="timer-controls" class="timer-controls" hidden>
+            <label for="timer-minutes">Minutes</label>
+            <input id="timer-minutes" type="number" min="1" max="180" value="20" inputmode="numeric">
+            <button id="timer-toggle" class="btn btn-ghost btn-small" type="button">Start timer</button>
+            <output id="timer-display" class="timer-display" aria-live="off">0:00</output>
+          </div>
+          <p id="timer-note" class="note" role="status"></p>
+        </div>
+
+        <p id="mission-error" class="form-error" role="alert"></p>
+
+        <div id="complete-panel" class="complete-panel" hidden>
+          <h4 id="complete-heading" tabindex="-1">Mission complete</h4>
+          <p>You chose the outdoors over the screen. That is the whole point.</p>
+          <p class="note">This is self-reported. TrailMate AI trusts you, because it has no GPS or sensors and cannot see where you were.</p>
+          <button id="write-journal-btn" class="btn btn-primary" type="button">Write a journal entry</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- JOURNAL -->
+    <section id="journal" class="section container" aria-labelledby="journal-title">
+      <div class="section-head">
+        <h2 id="journal-title">Nature journal</h2>
+        <span class="tag">Stored on this computer</span>
+      </div>
+      <div class="journal-layout">
+        <form id="journal-form" class="card form-card" novalidate>
+          <div class="field">
+            <label for="journal-content">What did you see, hear or feel?</label>
+            <textarea id="journal-content" rows="5" maxlength="2000" placeholder="A woodpecker somewhere above me. The air smelled like rain."></textarea>
+            <p class="hint"><span id="journal-count">0 / 2000</span></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="journal-mood">Mood</label>
+              <select id="journal-mood">
+                <option value="calm">Calm</option>
+                <option value="happy">Happy</option>
+                <option value="energized">Energized</option>
+                <option value="curious">Curious</option>
+                <option value="grateful">Grateful</option>
+                <option value="tired">Tired</option>
+                <option value="neutral" selected>Neutral</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="journal-mission">Link to a mission</label>
+              <select id="journal-mission">
+                <option value="">Not linked to a mission</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button id="journal-submit" class="btn btn-primary" type="submit">Save entry</button>
+          </div>
+          <p id="journal-error" class="form-error" role="alert"></p>
+        </form>
+
+        <div class="journal-entries">
+          <div id="journal-list"></div>
+          <p id="journal-empty" class="empty" hidden>Your journal is empty. After your first outing, write down one thing you noticed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section id="privacy" class="section container" aria-labelledby="privacy-title">
+      <div class="section-head">
+        <h2 id="privacy-title">Open, local and honest</h2>
+      </div>
+      <div class="info-grid">
+        <article class="card info-card">
+          <h3>Open-weight AI, on your device</h3>
+          <p>Missions are written by Google’s Gemma 3 model running locally through Ollama. No API key and no cloud AI service. Downloading the model the first time needs internet. After that, it works offline.</p>
+        </article>
+        <article class="card info-card">
+          <h3>Your journal stays yours</h3>
+          <p>Entries live in a SQLite file on this computer. There is no login, no analytics and no tracking, and this page makes no requests to other websites.</p>
+        </article>
+        <article class="card info-card">
+          <h3>A safe fallback</h3>
+          <p>If Ollama or the model isn’t available, TrailMate uses hand-written mission templates. Those missions are always labelled “Built-in template”, never as AI output.</p>
+        </article>
+        <article class="card info-card">
+          <h3>Honest about its limits</h3>
+          <p>TrailMate has no live weather, maps, trail conditions or wildlife data, and no GPS. Check conditions yourself, stay on public and safe paths, never eat wild plants, and keep your distance from animals. Progress is self-reported.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>TrailMate AI</strong> · Open source · Built for the Hacktoberfest 2026 DEV Open-Source AI Challenge (“Touch Grass”).</p>
+      <p class="footer-links">
+        <a href="/docs">API reference</a>
+        <span aria-hidden="true">·</span>
+        <span>See README.md and docs/ARCHITECTURE.md in the project folder</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- "Go outside" screen -->
+  <div id="outside-overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="overlay-title" hidden>
+    <div class="overlay-inner">
+      <p class="overlay-eyebrow">Mission in progress</p>
+      <h2 id="overlay-title">Lock your phone. Go be here.</h2>
+      <p id="overlay-mission" class="overlay-mission"></p>
+      <output id="overlay-timer" class="overlay-timer" aria-live="off" hidden>0:00</output>
+      <details class="overlay-tasks">
+        <summary>Need a reminder? Peek at your tasks</summary>
+        <ol id="overlay-task-list"></ol>
+      </details>
+      <button id="overlay-close" class="btn btn-light" type="button">I’m back</button>
+      <p class="overlay-note">Closing this screen does not complete your mission. Mark it complete yourself when you’re done.</p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
