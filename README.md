@@ -24,7 +24,11 @@ TrailMate AI turns "I should go outside" into a small, personal nature mission w
 
 ## Screenshots
 
-> **TODO:** add real screenshots to `docs/screenshots/` (home, mission form, mission, "Go outside" screen, journal, mobile), then embed with `![Home](docs/screenshots/01-home.png)`.
+![Home and progress](docs/screenshots/home.png)
+![Mission form](docs/screenshots/plan.png)
+![Generated mission](docs/screenshots/mission.png)
+![Nature journal](docs/screenshots/journal.png)
+![Privacy](docs/screenshots/privacy.png)
 
 ## Architecture
 
